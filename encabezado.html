@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title> Encabezado </title>
+</head>
+<body style="background-color:#000000;">
+</body>
+<center>
+<body>
+    <head>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+    <title>Neon text Display Using HTML and CSS</title>
+    <style>
+        body {
+            background-color: black;
+        }
+          
+        .glow {
+            font-size: 60px;
+            color: green;
+            text-align: center;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+          
+        /* Text glowing from onw shade to other shade */
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgb(43, 255, 0),
+                             0 0 20px rgb(43, 255, 0), 
+                             0 0 30px #26e600, 
+                             0 0 40px #26e600,
+                             0 0 50px #26e600,
+                             0 0 60px #26e600, 
+                             0 0 70px #26e600;
+            }
+            to {
+                text-shadow: 0 0 20px #4dff7a;
+                             0 0 30px #4dff7a, 
+                             0 0 40px #4dff7a,
+                             0 0 50px #4dff7a, 
+                             0 0 60px #4dff7a,
+                             0 0 70px #4dff7a, 
+                             0 0 80px #4dff7a;
+            }
+        }
+    </style>
+</head>
+  
+<body>
+  
+    <!-- Content will Glow -->
+    <h1 class="glow"><font color="white"><font size="10"> LOS ANIMALES </font></font></h1>
+  
+</body>
+</center>
+</body>
+</html>

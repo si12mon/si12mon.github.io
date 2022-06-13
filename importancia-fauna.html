@@ -1,0 +1,83 @@
+<html>
+<body background="leon.jpg">
+</body>
+</html>
+
+<body style="font-family: Verdana">
+</p>
+<h2><script language="JavaScript1.2">
+
+
+
+var message="IMPORTANCIA DE LA FAUNA EN LOS ECOSISTEMAS?"
+var neonbasecolor="red"
+var neontextcolor="blue"
+var neontextcolor2="green"
+var flashspeed=100						
+var flashingletters=3						
+var flashingletters2=1						
+var flashpause=0						
+
+
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script></h2>
+</body>
+<h3><font color="white">Las razones por las que los animales silvestres deben mantenerse en un ecosistema, son varias; primero, forman parte de la cadena trófica o alimenticia, es decir, 
+   que se establecen vínculos entre las mismas especies para sus hábitos alimenticios.<p>
+
+    Además, se encuentran articulados en el medio natural para hacer las veces de controles biológicos sobre otras que en su ausencia, pueden convertirse en plagas, 
+    desencadenando problemas de tipo sanitario y económico.<p>
+    
+    Son fuente de proteína para otras especies, incluso, para la humana, pues algunas proveen alimentos y productos caseros o farmacéuticos que sirven a los seres 
+    humanos. Son necesarios para los procesos de polinización de las plantas, y dispersión de semillas 
+    debido a las interacciones que tienen con plantas de diferente nivel; así pues, los animales silvestres juegan papeles definitivos tanto en la evolución de las 
+    plantas como en la evolución ecológica de los ecosistemas y de la vida humana.</font></h3>
+
+    <h2><a href="file:///E:/animalitos%20antonio/problema2.0.html" target="contenido"><font color="green"> volver </font></a></h2>
+</body>
+</html>

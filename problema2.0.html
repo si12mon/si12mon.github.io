@@ -1,0 +1,177 @@
+﻿<html>
+<head>
+<title> Mi primer frame </title> 
+</head>
+ <body background="mundo.jpg"> 
+</body>
+
+    
+      <font size="10"><marquee><font color="red"><img src="peresoso.jpg" width="80" height="80"/> Cuida a la fauna.La vida de los animales. <img src="tigre.jpg" width="80" height="80"/> </font></marquee></font>
+
+</center>
+<hr size="5px" color="black" />
+
+<head>  
+
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+
+//configure message
+message="IMPORTANCIA DE LA FAUNA EN LOS ECOSISTEMAS?"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h2><div id="jumpx" style="color:red;"></div></h2>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+
+</body>
+
+    <font color="blue"><h3><p>La fauna es el conjunto de especies animales que habitan en una región geográfica, que son propias de un período geológico. Esta depende tanto de factores abióticos como de factores bióticos.</p>
+    
+    Entre estos sobresalen las relaciones posibles de competencia o de depredación entre las especies.</h3></font>
+
+    <script>
+        var isIE=document.all?true:false;
+        var isNS4=document.layers?true:false;
+        var isNS6=!isIE&&document.getElementById?true:false;
+        function openIt() {
+          var _page = "http://www.js-examples.com/";
+          var _name = "Messages";
+          var _parms = "status=yes,top=100,left=200,width=250,height=1";
+          window.open(_page,_name,_parms)
+        }
+        </script>
+        
+        </head>
+        </b>
+    <body>
+
+    </p>
+    
+    <div id="StartMenu">
+    <h3>Existen bastantes tipos de fauna (ANIMALES):
+        <ol>
+        <li><a href="file:///E:/animalitos%20antonio/mamiferos.html" target="imagenes">Mamiferos</a></li>
+        <li><a href="file:///E:/animalitos%20antonio/aves.html" target="imagenes">Aves.</a></li>
+        <li><a href="file:///E:/animalitos%20antonio/reptiles.html" target="imagenes">Reptiles.</a></li>
+        <li><a href="file:///E:/animalitos%20antonio/ranas%20y%20sapos.html" target="imagenes">Ranas Y Sapos.</a></li>
+        <li><a href="file:///E:/animalitos%20antonio/peces.html" target="imagenes">Peces.</a></li>
+        <li><a href="file:///E:/animalitos%20antonio/insectos.html" target="imagenes">Insectos.</a></li>
+        <a href="file:///E:/animalitos%20antonio/importancia-fauna.html" target="contenido"><font color="green">Y Muchas Mas.</font></a></h3>
+    </div>
+    
+    <script name="startmenu"> 
+    onclick="openIt()"; // this statement should go inside the body tag to work best!
+    var h = "hidden"; 
+    var v = "visible"; 
+    
+    function showMenu(_v)
+    {
+      if(isIE)
+        window.document.all.StartMenu.style.visibility = _v?v:h;
+      if(isNS6)
+        document.getElementById("StartMenu").style.visibility=_v?v:h;
+      if(isNS4)
+      {
+        alert("This script will not run for NS4 because this DIV is positioned relatively and not absolutely!");
+        /*
+         * This code would run if the DIV was positioned absolutely.
+         * document.StartMenu.hidden=_v?"true":"false";
+         */
+      }
+    }
+    </script> 
+    <a href="javascript:showMenu(true)"><font size="2">VER</font></a><font size="2"><BR>
+    <a href="javascript:showMenu(false)">ESCONDER</a> </font>
+    
+    </body>
+
+
+</ol>
+</h3>
+
+<hr size="10px" color="black" />
+
+</body>
+</html>
